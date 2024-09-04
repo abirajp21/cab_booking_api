@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>cab_project</display-name>
+  <servlet>
+    <servlet-name>Employee</servlet-name>
+    <servlet-class>com.cab_project.Servlets.EmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Employee</servlet-name>
+    <url-pattern>/employees/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Driver</servlet-name>
+    <servlet-class>com.cab_project.Servlets.DriverController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Driver</servlet-name>
+    <url-pattern>/drivers/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Cab</servlet-name>
+    <servlet-class>com.cab_project.Servlets.CabController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cab</servlet-name>
+    <url-pattern>/cabs/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <filter>
+    <display-name>AuthenticateFilter</display-name>
+    <filter-name>AuthenticateFilter</filter-name>
+    <filter-class>com.cab_project.filters.AuthenticateFilter</filter-class>
+  </filter>
+  
+  <!-- <filter-mapping>
+    <filter-name>AuthenticateFilter</filter-name>
+    <servlet-name>Driver</servlet-name>
+  </filter-mapping>
+  
+  <filter-mapping>
+    <filter-name>AuthenticateFilter</filter-name>
+    <servlet-name>Employee</servlet-name>
+  </filter-mapping> -->
+  
+ <filter-mapping>
+    <filter-name>AuthenticateFilter</filter-name>
+    <url-pattern>/cab_project/</url-pattern>
+  </filter-mapping> 
+  
+  
+</web-app>

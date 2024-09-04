@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  
+  <servlet>
+  	<servlet-name>addServlet</servlet-name>
+  	<servlet-class>com.cab_bookings.AddServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>addServlet</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>sq</servlet-name>
+  	<servlet-class>com.cab_bookings.SqServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>sq</servlet-name>
+  	<url-pattern>/sq</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>employee</servlet-name>
+  	<servlet-class>com.cab_bookings.EmployeeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>employee</servlet-name>
+  <url-pattern>/employee</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cab</servlet-name>
+  	<servlet-class>com.cab_bookings.CabServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>cab</servlet-name>
+  <url-pattern>/cab</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app> 
